@@ -122,7 +122,6 @@ async function clickElements() {
         playerPairCounter--;
         if (playerPairCounter === 0) {
           setTimeout(() => {
-            getCounter("end");
             finishGame();
           }, 500);
         }
@@ -343,11 +342,7 @@ function startAi() {
   }, 1000);
 }
 //
-async function getCounter(mode) {
-  counterTime = await eel.getTime(mode)();
-  console.log(counterTime);
-  return counterTime;
-}
+
 //funkcja uruchamia grę
 function startGame() {
   sendPlayerName();
@@ -360,7 +355,6 @@ function startGame() {
       getColors();
       eventForDivs("add");
       startAi();
-      getCounter("start");
     }
   });
 }
