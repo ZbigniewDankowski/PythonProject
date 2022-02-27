@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game with Python</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="playerNameBox">
+          <h3 class="playerHello">Please, enter your name: <br /></h3>
+          <input type="text" class="inputPlayerName" />
+          <button class="inputBtn">Accept</button>
+          <span class="error"
+            >*nazwa musi zawierać przynajmniej jeden znak</span
+          >
+        </div>
+        <div class="titleBox">
+          <h1 class="title">Memory game</h1>
+        </div>
+
+        <div class="levels">
+          <button class="level" data-level="easy">Easy</button>
+          <button class="level" data-level="hard">Hard</button>
+        </div>
+        <button id="startBtn">Start</button>
+      </div>
+      <div class="loading unactive">
+        <div class="animationItem">
+          <p class="percent"></p>
+        </div>
+      </div>
+      <div class="gameContent unactive">
+        <div class="message unactive">
+          <h3 class="info"></h3>
+          <button class="again">Zagraj jeszcze raz!</button>
+        </div>
+        <div class="table table--player">
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+          <div class="color clickable"></div>
+        </div>
+
+        <div class="table table--ai">
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+          <div class="color--ai clickable"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

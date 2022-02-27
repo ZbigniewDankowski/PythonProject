@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  outline: none;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.container {
+  width: 50%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  box-shadow: 0 0 20px white;
+  transition: 0.5s;
+}
+.playerNameBox {
+  height: 40%;
+  width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: orange;
+  box-shadow: 0 0 20px black;
+  border-radius: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: "Concert One", cursive;
+}
+.playerNameBox input,
+.inputBtn {
+  font-size: 35px;
+  font-family: "Concert One", cursive;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.inputBtn {
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 0 0 20px black;
+  cursor: pointer;
+}
+
+/* style menu*/
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: url(./assets/background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.titleBox {
+  flex-basis: 30%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  color: Orange;
+  font-size: 65px;
+  padding: 10px 20px;
+  font-family: "Concert One", cursive;
+  text-shadow: 0 0 2px black;
+  padding: 30px;
+  animation: colors 10s linear infinite alternate-reverse;
+}
+.levels {
+  flex-basis: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.level {
+  flex-basis: 30%;
+  height: 30%;
+  font-family: "Concert One", cursive;
+  font-size: 35px;
+  background-color: rgba(0, 255, 0, 0.6);
+  color: white;
+  border: 1px solid green;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.level:hover {
+  background-color: green;
+  box-shadow: 0 0 30px green;
+}
+.level--active {
+  background-color: green;
+  box-shadow: 0 0 30px green;
+}
+.level:nth-child(2).level--active {
+  background-color: red;
+  box-shadow: 0 0 30px red;
+}
+.level:nth-child(2) {
+  background-color: rgba(255, 0, 0, 0.6);
+  border: 1px solid red;
+}
+.level:nth-child(2):hover {
+  background-color: red;
+  box-shadow: 0 0 30px red;
+}
+#startBtn {
+  flex-basis: 10%;
+  width: 30%;
+  margin: 0 auto;
+  border: 5px solid orange;
+  border-radius: 10px;
+  color: black;
+  font-family: "Concert One", cursive;
+  font-size: 30px;
+  background-color: orange;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.startBtn:hover {
+  color: orange;
+  background-color: transparent;
+  box-shadow: 0 0 50px orange;
+  font-size: 50px;
+}
+.error {
+  font-size: 10px;
+}
+
+/*style gry*/
+.container--playable {
+  width: 95%;
+  border: none;
+  box-shadow: none;
+  background-color: #fff;
+  box-shadow: 0 0 20px white;
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  animation: backgroundd 12s ease-out infinite;
+}
+.animationItem {
+  width: 30%;
+  height: 30%;
+  background-color: blue;
+  border-radius: 40% 70% 40%/70% 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading 12s ease-out infinite;
+}
+.percent {
+  font-size: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Concert One", cursive;
+}
+.gameContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.message {
+  position: fixed;
+  background-color: #fff;
+  width: 40%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 3px solid black;
+  box-shadow: 0 0 20px black;
+  z-index: 999;
+}
+.info {
+  font-size: 30px;
+}
+.again {
+  padding: 10px 20px;
+  font-size: 20px;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.again {
+  background-color: black;
+  color: white;
+}
+.table {
+  height: 95%;
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.table--player {
+  border: 2px solid blue;
+  box-shadow: 0 0 20px blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.table--ai {
+  border: 2px solid red;
+  box-shadow: 0 0 20px red;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.line {
+  height: 90%;
+  flex-basis: 5%;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Concert One", cursive;
+}
+.color,
+.color--ai,
+.hidden {
+  flex-basis: 24%;
+  height: 24%;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.clickable::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: gray !important;
+}
+
+@keyframes colors {
+  0% {
+    color: orange;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: yellow;
+  }
+}
+@keyframes loading {
+  0% {
+    border-radius: 40% 70% 40%/70% 40%;
+    background-color: blue;
+  }
+  25% {
+    border-radius: 70% 40% 70%/40% 70%;
+    background-color: red;
+  }
+  50% {
+    border-radius: 40% 70% 40%/70% 40%;
+    background-color: yellow;
+  }
+  75% {
+    border-radius: 70% 40% 70%/40% 70%;
+    background-color: green;
+  }
+  100% {
+    border-radius: 40% 70% 40%/70% 40%;
+    background-color: blue;
+  }
+}
+@keyframes backgroundd {
+  0% {
+    background-color: orange;
+  }
+  25% {
+    background-color: green;
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: red;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+.unactive {
+  display: none;
+}
+.clicked {
+  box-shadow: 0 0 20px black;
+}
